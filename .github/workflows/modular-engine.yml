@@ -44,10 +44,6 @@ jobs:
     - run: npm test
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
-    - name: Upload coverage to Code Climate
-      uses: paambaati/codeclimate-action@v3.0.0
-      env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
     - name: Upload coverage to coveralls.io
       uses: coverallsapp/github-action@v1.1.2
       with:

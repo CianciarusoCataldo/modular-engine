@@ -1,5 +1,5 @@
 /**
- * @file internal Redux store init
+ * @file internal modular-engine Redux store init
  *
  * @author Cataldo Cianciaruso <https://github.com/CianciarusoCataldo>
  *

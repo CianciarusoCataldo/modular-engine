@@ -1,3 +1,11 @@
+/**
+ * @file modular-engine init helpers
+ *
+ * @author Cataldo Cianciaruso <https://github.com/CianciarusoCataldo>
+ *
+ * @copyright Cataldo Cianciaruso 2022
+ */
+
 import { createModularReducer, fillObject } from "modular-utils";
 import {
   ModularEngineConfig,

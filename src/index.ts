@@ -9,7 +9,7 @@ export {
 
 export { initEngine } from "./api/core/init";
 
-/** Utils */
+/** Type definitions */
 
 export {
   ModularEngineConfig,
@@ -28,4 +28,12 @@ export {
   ModularEngineReducerCases,
 } from "modular-engine-types";
 
-/** Type definitions */
+/** Utils */
+
+export {
+  computeValue,
+  createModularAction,
+  createModularReducer,
+  createModularSelector,
+  fillObject,
+} from "modular-utils";

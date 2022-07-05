@@ -52,7 +52,7 @@ This lib is analyzed and tested with:
 
 ## Included libraries<img align="left" src="https://user-images.githubusercontent.com/47371276/154185729-f3a000f1-6a4b-459a-82eb-6923db3cdbdb.svg" with="30" height="30" />
 
-- [Redux](https://redux.js.org/), in conjunction with [Reduxjs toolkit](https://redux-toolkit.js.org/) and [Redux observable](https://redux-observable.js.org/), for global state management
+- [Redux](https://redux.js.org/), in conjunction with [Reduxjs toolkit](https://redux-toolkit.js.org/), for global state management
 - Modular-engine is written entirely with [Typescript](https://www.typescriptlang.org/)
 
 <br>

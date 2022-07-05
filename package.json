@@ -1,6 +1,6 @@
 {
   "name": "modular-engine",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Enhance your app with a lot of features, without any line of code !",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
