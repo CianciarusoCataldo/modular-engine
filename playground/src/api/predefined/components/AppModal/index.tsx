@@ -8,7 +8,7 @@ import {
   isModalVisible,
 } from "modular-plugin-modal";
 
-import { Modal } from "@cianciarusocataldo/modular-ui";
+import { Modal } from "modular-ui-components";
 import { driveWithDarkMode } from "app/utils";
 
 /** Custom Modular-app modal */

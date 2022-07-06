@@ -1,4 +1,4 @@
-import { AllowedComponent, Container } from "@cianciarusocataldo/modular-ui";
+import { AllowedComponent, Container } from "modular-ui-components";
 import { driveWithDarkMode } from "app/utils";
 
 /** Custom Modular-app page */

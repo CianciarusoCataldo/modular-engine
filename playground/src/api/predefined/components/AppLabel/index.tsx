@@ -1,4 +1,4 @@
-import { Label, LabelProps } from "@cianciarusocataldo/modular-ui";
+import { Label, LabelProps } from "modular-ui-components";
 import { driveWithDarkMode } from "app/utils";
 
 const AppLabel = (props: Omit<LabelProps, "dark">) => {

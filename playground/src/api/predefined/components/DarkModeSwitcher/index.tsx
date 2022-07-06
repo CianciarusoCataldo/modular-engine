@@ -6,7 +6,7 @@ import { DarkModeIcon, LightModeIcon } from "assets/images";
 
 import { isInDarkMode, setDarkMode } from "modular-plugin-ui";
 
-import { Toggle } from "@cianciarusocataldo/modular-ui";
+import { Toggle } from "modular-ui-components";
 
 const DarkModeSwitcher = () => {
   const dispatch = useDispatch();

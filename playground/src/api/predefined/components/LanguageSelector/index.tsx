@@ -4,7 +4,7 @@ import { LANGUAGES_ICONS } from "assets/images";
 
 import { changeLanguage, getLanguage } from "modular-plugin-localization";
 
-import { Dropdown } from "@cianciarusocataldo/modular-ui";
+import { Dropdown } from "modular-ui-components";
 
 /** Custom Modular-app laguage selector */
 const LanguageSelector = () => {

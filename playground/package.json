@@ -5,7 +5,6 @@
   "private": true,
   "homepage": "https://cianciarusocataldo.github.io/modular-engine",
   "dependencies": {
-    "@cianciarusocataldo/modular-ui": "^5.2.1",
     "@reduxjs/toolkit": "^1.7.1",
     "modular-plugin-epics": "^0.1.4",
     "modular-plugin-localization": "^0.1.0",
@@ -14,6 +13,7 @@
     "modular-plugin-themer": "^0.1.0",
     "modular-plugin-ui": "^0.1.0",
     "modular-plugin-url-checker": "^0.1.1",
+    "modular-ui-components": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.3",
@@ -22,7 +22,6 @@
     "rxjs": "^7.5.1"
   },
   "devDependencies": {
-    "@cianciarusocataldo/modular-ui": "^5.2.1",
     "@types/history": "^4.7.8",
     "@types/jest": "^27.4.0",
     "@types/mocha": "^9.0.0",
@@ -43,6 +42,7 @@
     "modular-plugin-themer": "^0.1.0",
     "modular-plugin-ui": "^0.1.0",
     "modular-plugin-url-checker": "^0.1.1",
+    "modular-ui-components": "^1.0.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",

@@ -6,7 +6,7 @@ import { goBack } from "modular-plugin-router";
 import { isInDarkMode } from "modular-plugin-ui";
 import { isHomePage } from "modular-plugin-router";
 
-import { Button, Link } from "@cianciarusocataldo/modular-ui";
+import { Button, Link } from "modular-ui-components";
 import { openDrawer } from "api/actions";
 import { getAppName } from "modular-engine-preview";
 

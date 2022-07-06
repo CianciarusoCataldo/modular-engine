@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { Drawer } from "@cianciarusocataldo/modular-ui";
+import { Drawer } from "modular-ui-components";
 import { driveWithDarkMode } from "app/utils";
 import { closeDrawer } from "api/actions";
 import { isDrawerOpen } from "api/selectors";

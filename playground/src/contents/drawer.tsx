@@ -4,7 +4,7 @@ import { LogoIcon } from "assets/images";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
-import { Button, Divider, Link } from "@cianciarusocataldo/modular-ui";
+import { Button, Divider, Link } from "modular-ui-components";
 import { driveWithDarkMode } from "app/utils";
 import { closeDrawer } from "api/actions";
 import { getAppName } from "modular-engine-preview";

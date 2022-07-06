@@ -1,4 +1,4 @@
-import { Label } from "@cianciarusocataldo/modular-ui";
+import { Label } from "modular-ui-components";
 import { NavLink } from "react-router-dom";
 
 import { RouterLinkProps } from "./types";
