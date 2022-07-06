@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "https://cianciarusocataldo.github.io/modular-engine/static/css/main.6dd3ff4d.css",
-    "main.js": "https://cianciarusocataldo.github.io/modular-engine/static/js/main.b75a54c8.js",
-    "static/js/502.03f72c23.chunk.js": "https://cianciarusocataldo.github.io/modular-engine/static/js/502.03f72c23.chunk.js",
-    "static/js/634.2fb91775.chunk.js": "https://cianciarusocataldo.github.io/modular-engine/static/js/634.2fb91775.chunk.js",
+    "main.css": "https://cianciarusocataldo.github.io/modular-engine/static/css/main.1cc7eb23.css",
+    "main.js": "https://cianciarusocataldo.github.io/modular-engine/static/js/main.a3c7c950.js",
+    "static/js/502.df403560.chunk.js": "https://cianciarusocataldo.github.io/modular-engine/static/js/502.df403560.chunk.js",
+    "static/js/634.e8f69681.chunk.js": "https://cianciarusocataldo.github.io/modular-engine/static/js/634.e8f69681.chunk.js",
     "static/js/505.e7e18a09.chunk.js": "https://cianciarusocataldo.github.io/modular-engine/static/js/505.e7e18a09.chunk.js",
-    "static/js/197.e177b0fa.chunk.js": "https://cianciarusocataldo.github.io/modular-engine/static/js/197.e177b0fa.chunk.js",
+    "static/js/197.34fb3d0c.chunk.js": "https://cianciarusocataldo.github.io/modular-engine/static/js/197.34fb3d0c.chunk.js",
     "static/media/logo.png": "https://cianciarusocataldo.github.io/modular-engine/static/media/logo.f75eb98212c8f4007cea.png",
     "static/media/burger.svg": "https://cianciarusocataldo.github.io/modular-engine/static/media/burger.95ad86a68af36a771a941051e6301463.svg",
     "static/media/dark-mode.svg": "https://cianciarusocataldo.github.io/modular-engine/static/media/dark-mode.a64ce9a42aec862c162723ef488c3922.svg",
@@ -20,7 +20,7 @@
     "static/media/left-arrow.svg": "https://cianciarusocataldo.github.io/modular-engine/static/media/left-arrow.2371d25ae4da5666885314488cd7e031.svg"
   },
   "entrypoints": [
-    "static/css/main.6dd3ff4d.css",
-    "static/js/main.b75a54c8.js"
+    "static/css/main.1cc7eb23.css",
+    "static/js/main.a3c7c950.js"
   ]
 }
