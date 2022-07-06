@@ -18,5 +18,5 @@
     "jsx": "react-jsx"
   },
   "files": ["src/api/core/types.d.ts"],
-  "include": ["src"]
+  "include": ["src/**/*.ts"]
 }
