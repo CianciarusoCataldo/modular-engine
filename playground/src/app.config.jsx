@@ -8,7 +8,7 @@ const appConfig = {
   pagesRendering: (route) => React.lazy(() => import(`app/pages/${route}`)),
   content: App,
   modals: {
-    TestModal: App,
+    TestModal: <App/>,
   },
   header: HeaderContent,
   footer: FooterContent,

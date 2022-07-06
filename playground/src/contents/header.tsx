@@ -2,7 +2,9 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { BurgerIcon, LeftArrowIcon, LogoIcon } from "assets/images";
 
-import { goBack, isHomePage, isInDarkMode } from "modular-plugins";
+import { goBack } from "modular-plugin-router";
+import { isInDarkMode } from "modular-plugin-ui";
+import { isHomePage } from "modular-plugin-router";
 
 import { Button, Link } from "@cianciarusocataldo/modular-ui";
 import { openDrawer } from "api/actions";

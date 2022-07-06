@@ -1,6 +1,6 @@
 import { createSelector } from "reselect";
 
-import { getUIView } from "modular-plugins";
+import { getUIView } from "modular-plugin-ui";
 
 /**
  * Returns modular-engine drawer visibility

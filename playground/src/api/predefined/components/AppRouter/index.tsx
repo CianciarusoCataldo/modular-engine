@@ -2,7 +2,7 @@ import { createBrowserHistory, History } from "history";
 
 import { useSelector } from "react-redux";
 
-import { getHomePage, getRoutes } from "modular-plugins";
+import { getHomePage, getRoutes } from "modular-plugin-router";
 
 import { Redirect, Route, RouteProps, Router, Switch } from "react-router-dom";
 

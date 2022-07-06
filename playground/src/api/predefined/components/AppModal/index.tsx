@@ -6,7 +6,7 @@ import {
   closeModal,
   getModalType,
   isModalVisible,
-} from "modular-plugins";
+} from "modular-plugin-modal";
 
 import { Modal } from "@cianciarusocataldo/modular-ui";
 import { driveWithDarkMode } from "app/utils";

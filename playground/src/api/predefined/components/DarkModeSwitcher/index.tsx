@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { DarkModeIcon, LightModeIcon } from "assets/images";
 
-import { isInDarkMode, setDarkMode } from "modular-plugins";
+import { isInDarkMode, setDarkMode } from "modular-plugin-ui";
 
 import { Toggle } from "@cianciarusocataldo/modular-ui";
 
