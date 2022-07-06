@@ -6,15 +6,16 @@
  * @copyright Cataldo Cianciaruso 2022
  */
 
-import { createModularReducer, fillObject } from "modular-utils";
 import {
   ModularEngineConfig,
   ModularEngineCustomConfig,
   ModularEngineFormatter,
   ModularEngineParser,
-  ModularEngineReducerCases,
+  ModularEngineEffects,
   ModularEngineStore,
 } from "modular-engine-types";
+
+import { createModularReducer, fillObject } from "modular-utils";
 
 export const parsePlugins = (config: ModularEngineConfig) => {
   let inputConfig = { ...config };
@@ -22,8 +23,8 @@ export const parsePlugins = (config: ModularEngineConfig) => {
   let enabledPlugins: Record<string, boolean> = {};
   let formatters: ModularEngineFormatter[] = [];
   let reduxConfigs: ((config: ModularEngineConfig) => {
-    slice: string;
-    reducerCases: ModularEngineReducerCases<any>;
+    slice?: string;
+    effects?: ModularEngineEffects<any>;
     initialState?: any;
     reducer?: any;
   })[] = [];
@@ -119,7 +120,7 @@ export const parsePlugins = (config: ModularEngineConfig) => {
           inputConfig.redux.customize[reduxConfig.slice] =
             fillObject<ModularEngineCustomConfig>({
               toFill: inputConfig.redux.customize[reduxConfig.slice],
-              defaultObj: { state: {}, effects: [] },
+              defaultObj: { state: {}, effects: {} },
             });
 
           const initialState = reduxConfig.initialState || {};
@@ -132,10 +133,15 @@ export const parsePlugins = (config: ModularEngineConfig) => {
             ...input.redux.customize[reduxConfig.slice].state,
           };
 
+          let effects = input.redux.customize[reduxConfig.slice].effects;
+
+          if (reduxConfig.effects) {
+            effects = { ...effects, ...reduxConfig.effects };
+          }
+
           input.redux.reducers[reduxConfig.slice] = createModularReducer({
             initialState: inputConfig.redux.preload[reduxConfig.slice],
-            customConfig: inputConfig.redux.customize[reduxConfig.slice],
-            internalCases: reduxConfig.reducerCases,
+            effects,
             additionalReducer: reduxConfig.reducer,
           });
         }

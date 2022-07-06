@@ -43,9 +43,10 @@ const runTests = () => {
       clearMocks();
 
       config.plugins = [];
+      config = formatConfig(config);
     });
     test("every plugin step callback is executed", () => {
-      config.plugins.push(() => ({
+      config.plugins?.push(() => ({
         feature: "test-plugin1",
         create: (config) => ({
           field: "test",
@@ -70,20 +71,27 @@ const runTests = () => {
     });
 
     test("plugin custom fields are preserved and restored when deleted", () => {
-      config.plugins.push(() => ({
+      config.plugins?.push(() => ({
         feature: "test-plugin1",
         create: (config) => null,
         format: (config, plugins) => ({}),
         before: ({ config }) => {},
       }));
 
-      config.plugins.push(() => ({
+      config.plugins?.push(() => ({
         feature: "test-plugin2",
+        redux: (config) => ({
+          slice: "testPlugin2",
+        }),
         create: (config) => ({
           field: "testPlugin2",
           content: { test: "test" },
         }),
       }));
+
+      if (config.redux?.customize) {
+        config.redux.customize["testPlugin2"] = {};
+      }
 
       const result = initEngine({
         config,
@@ -93,24 +101,27 @@ const runTests = () => {
     });
 
     test("if feature field is returned, plugin will be included inside enabled plugins list", () => {
-      config.plugins.push(() => ({
+      config.plugins?.push(() => ({
         feature: "test-plugin1",
-        create: (config) => null,
         format: (config, plugins) => ({}),
         before: ({ config }) => {},
         redux: (config) => ({
           slice: "testPlugin",
-          reducerCases: {},
+          effects: {},
         }),
       }));
 
-      config.plugins.push(() => ({
+      config.plugins?.push(() => ({
         feature: "test-plugin2",
         create: (config) => ({
           field: "testPlugin2",
           content: { test: "test" },
         }),
       }));
+
+      if (config.redux?.customize) {
+        config.redux.customize["testPlugin"] = { state: {}, effects: {} };
+      }
 
       const result = initEngine({
         config,

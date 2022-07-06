@@ -10,22 +10,16 @@ const engineConfig = {
         state: {
           isDrawerOpen: false,
         },
-        effects: [
-          {
-            trigger: closeDrawer.type,
-            effect: (state, action) => ({
-              ...state,
-              isDrawerOpen: false,
-            }),
-          },
-          {
-            trigger: openDrawer.type,
-            effect: (state, action) => ({
-              ...state,
-              isDrawerOpen: true,
-            }),
-          },
-        ],
+        effects: {
+          [closeDrawer.type]: (state, action) => ({
+            ...state,
+            isDrawerOpen: false,
+          }),
+          [openDrawer.type]: (state, action) => ({
+            ...state,
+            isDrawerOpen: true,
+          }),
+        },
       },
     },
   },

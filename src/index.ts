@@ -25,7 +25,9 @@ export {
   ModularEngineParser,
   ModularEnginePlugin,
   ModularEngineReducer,
-  ModularEngineReducerCases,
+  ModularEngineEffects,
+  ModularEngineGenericAction,
+  ModularEngineStore,
 } from "modular-engine-types";
 
 /** Utils */

@@ -32,7 +32,6 @@ export const initEngine = ({ config }: { config?: ModularEngineConfig }) => {
   const store = initStore(inputConfig);
 
   inputConfig = pluginsOutput.after(inputConfig, store);
-  console.log(pluginsOutput.enabledPlugins);
 
   return {
     store,
