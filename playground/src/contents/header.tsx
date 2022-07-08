@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { BurgerIcon, LeftArrowIcon, LogoIcon } from "assets/images";
+import { BurgerIcon, LeftArrowIcon, LogoIcon } from "../assets/images";
 
 import { goBack } from "modular-plugin-router";
 import { isInDarkMode } from "modular-plugin-ui";
 import { isHomePage } from "modular-plugin-router";
 
 import { Button, Link } from "modular-ui-components";
-import { openDrawer } from "api/actions";
-import { getAppName } from "modular-engine-preview";
+import { openDrawer } from "../api/actions";
+import { getAppName } from "modular-utils";
 
 const HeaderContent = () => {
   const dispatch = useDispatch();

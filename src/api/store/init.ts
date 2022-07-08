@@ -14,12 +14,12 @@ import {
   ModularEngineGlobalState,
 } from "modular-engine-types";
 
-import { engineInitCompleted } from "./internal-slices/core/actions";
+import { engineInitCompleted } from "modular-utils";
 
 /**
  * Initialize and returns a Redux store, using Modular-engine Config parameters
  *
- * @param {Config} config Configuration parameters
+ * @param {ModularEngineConfig} config Configuration parameters
  *
  * @author Cataldo Cianciaruso <https://github.com/CianciarusoCataldo>
  *

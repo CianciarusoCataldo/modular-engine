@@ -15,7 +15,7 @@ import {
   AppRouter,
   DarkModeSwitcher,
   LanguageSelector,
-} from "api/predefined/components";
+} from "../predefined/components";
 
 /** Render Modular-app */
 const initApp = ({

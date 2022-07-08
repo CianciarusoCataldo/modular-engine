@@ -1,10 +1,3 @@
-/** Config state slice */
-
-export {
-  getConfig,
-  getAppName,
-} from "./api/store/internal-slices/config/selectors";
-
 /** Engine init */
 
 export { initEngine } from "./api/core/init";
@@ -13,7 +6,7 @@ export { initEngine } from "./api/core/init";
 
 export {
   ModularEngineConfig,
-  ConfigState,
+  ModularEngineConfigState,
   ModularEngineAction,
   ModularEngineActionCreator,
   ModularEngineCustomConfig,

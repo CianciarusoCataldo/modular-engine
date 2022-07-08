@@ -1,17 +1,20 @@
 import classNames from "classnames";
-import { LogoIcon } from "assets/images";
+import { LogoIcon } from "../assets/images";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
 import { Button, Divider, Link } from "modular-ui-components";
-import { driveWithDarkMode } from "app/utils";
-import { closeDrawer } from "api/actions";
-import { getAppName } from "modular-engine-preview";
+import { driveWithDarkMode } from "../app/utils";
+import { closeDrawer } from "../api/actions";
+import { getAppName } from "modular-utils";
 
-import { getRoutes, requestRoute } from "modular-plugin-router";
-import { getLocalizationConfig } from "modular-plugin-localization";
-import { isInDarkMode } from "modular-plugin-ui";
+import {
+  getLocalizationConfig,
+  getRoutes,
+  requestRoute,
+  isInDarkMode,
+} from "modular-plugins";
 
 export const DrawerLogo = () => {
   const APP_NAME = useSelector(getAppName);

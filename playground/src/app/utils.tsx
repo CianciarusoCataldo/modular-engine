@@ -1,4 +1,4 @@
-import { isInDarkMode } from "modular-plugin-ui";
+import { isInDarkMode } from "modular-plugins";
 import { useSelector } from "react-redux";
 
 /**
