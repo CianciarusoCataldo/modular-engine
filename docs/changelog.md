@@ -20,6 +20,7 @@
 - Modular dependencies updated
 - Cleanup
 - Refactoring
+- `initEngine` function now accept config file directly, without passing an object with config inside
 
 ### 0.3.0
 
