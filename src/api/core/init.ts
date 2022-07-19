@@ -1,5 +1,5 @@
 /**
- * @file modular-engine system init
+ * @file [modular-engine](https://github.com/CianciarusoCataldo/modular-engine) system init
  *
  * @author Cataldo Cianciaruso <https://github.com/CianciarusoCataldo>
  *
@@ -12,7 +12,10 @@ import { formatConfig, parsePlugins } from "../helpers/init-helper";
 import initStore from "../store/init";
 
 /**
- * Initialize the entire modular-engine system, using Config object parameters, and returns a Redux store, providing also the parsed config object
+ * Initialize the entire [modular-engine system](https://github.com/CianciarusoCataldo/modular-engine), using Config object parameters,
+ * and returns a Redux store, providing also the parsed config object
+ *
+ * @see https://cianciarusocataldo.github.io/modular-engine/docs
  *
  * @param {Config} config Configuration parameters
  *
@@ -20,7 +23,7 @@ import initStore from "../store/init";
  *
  * @copyright Cataldo Cianciaruso 2022
  */
-export const initEngine = ({ config }: { config?: ModularEngineConfig }) => {
+export const initEngine = (config?: ModularEngineConfig) => {
   let inputConfig = formatConfig(config);
 
   const pluginsOutput = parsePlugins(inputConfig);
@@ -35,7 +38,6 @@ export const initEngine = ({ config }: { config?: ModularEngineConfig }) => {
 
   return {
     store,
-    config: inputConfig,
-    enabledPlugins: pluginsOutput.enabledPlugins,
+    config: { ...inputConfig, enabledPlugins: pluginsOutput.enabledPlugins },
   };
 };

@@ -61,7 +61,7 @@ const runTests = () => {
         ...steps,
       }));
 
-      initEngine({ config });
+      initEngine(config);
 
       expect(format).toBeCalled;
       expect(before).toBeCalled;
@@ -93,9 +93,7 @@ const runTests = () => {
         config.redux.customize["testPlugin2"] = {};
       }
 
-      const result = initEngine({
-        config,
-      }).config;
+      const result = initEngine(config).config;
 
       expect(result).toHaveProperty("testPlugin2");
     });
@@ -123,9 +121,7 @@ const runTests = () => {
         config.redux.customize["testPlugin"] = { state: {}, effects: {} };
       }
 
-      const result = initEngine({
-        config,
-      }).enabledPlugins;
+      const result = initEngine(config).enabledPlugins;
 
       expect(result).toStrictEqual({
         "test-plugin1": true,
@@ -135,18 +131,16 @@ const runTests = () => {
 
     test("if a plugin gives error, is skipped", () => {
       initEngine({
-        config: {
-          plugins: [
-            () => {
-              if (config) {
-                throw new Error("error into plugin");
-              }
-              return {
-                ...steps,
-              };
-            },
-          ],
-        },
+        plugins: [
+          () => {
+            if (config) {
+              throw new Error("error into plugin");
+            }
+            return {
+              ...steps,
+            };
+          },
+        ],
       });
 
       expect(format).not.toBeCalled;

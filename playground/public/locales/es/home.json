@@ -1,1 +1,8 @@
-{}
+{
+  "cards_installation_header": "Installation",
+  "cards_installation_body": "To use modular-engine inside your project, install it with npm:",
+  "cards_selectors_body": "Try all selectors from different plugins",
+  "cards_selectors_button": "Go to selectors page",
+  "cards_actions_body": "Explore all actions effects, from different plugins",
+  "cards_actions_button": "Go to selectors page"
+}

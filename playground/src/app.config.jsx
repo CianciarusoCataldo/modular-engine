@@ -1,21 +1,31 @@
-import App from "app/App";
-import { DrawerContent, DrawerLogo } from "contents/drawer";
-import FooterContent from "contents/footer";
-import HeaderContent from "contents/header";
 import React from "react";
 
+import drawerPlugin from "api/plugins/drawer";
+import formsPlugin from "api/plugins/forms";
+import pagesrPlugin from "api/plugins/pages";
+
+import { DrawerContent } from "contents/drawer";
+import footer from "contents/footer";
+import header from "contents/header";
+import modals from "contents/modals";
+import { syncConfigWithEngine } from "api/helpers/engine-connector";
+
 const appConfig = {
-  pagesRendering: (route) => React.lazy(() => import(`app/pages/${route}`)),
-  content: App,
-  modals: {
-    TestModal: <App/>,
+  core: {
+    sync: syncConfigWithEngine,
   },
-  header: HeaderContent,
-  footer: FooterContent,
+  plugins: [drawerPlugin, pagesrPlugin, formsPlugin],
+  preloader: () => <div className="preloader" />,
+  pages: {
+    render: (route) => React.lazy(() => import(`app/pages/${route}`)),
+  },
+  forms: {
+    modals,
+  },
+  header,
+  footer,
   drawer: {
     content: DrawerContent,
-    logo: DrawerLogo,
-    elements: [],
   },
 };
 

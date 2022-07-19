@@ -1,7 +1,5 @@
 import PKG from "../../package.json";
 
-import defaultConfig from "../../src/api/store/internal-slices/config/initial-state";
-
 import storeTests from "../test-suites/store/init";
 
 import engineTests from "../test-suites/engine/init";
@@ -11,10 +9,7 @@ import { ModularEngineGlobalState } from "modular-engine-types";
 
 const MOCK_STATE: ModularEngineGlobalState = {
   config: {
-    ...defaultConfig,
-    redux: {
-      ...defaultConfig.redux,
-    },
+    redux: {},
   },
 };
 

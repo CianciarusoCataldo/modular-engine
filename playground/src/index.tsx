@@ -1,22 +1,4 @@
-import "assets/styles/styles.output.css";
-import { createBrowserHistory } from "history";
-
-const defaultTheme = {
-  header: {
-    height: "20%",
-  },
-  footer: {
-    height: "10%",
-  },
-  router: {
-    height: "70%",
-  },
-  body: {
-    darkColor: "",
-    lightColor: "",
-    initialColor: "",
-  },
-};
+import "assets/styles";
 
 if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
   navigator.serviceWorker
@@ -33,47 +15,46 @@ if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
   console.log("Service workers are not supported.");
 }
 
-import("modular-engine-preview").then(({ initEngine }) => {
-  let engineConfig = {};
+let ModularApp: any = null;
+let engineParams: any = null;
 
-  try {
-    engineConfig = require("engine.config").default;
-  } catch {
-    process.env.NODE_ENV === "development" &&
-      console.log("engine.config file not found, using default values");
-    engineConfig = {};
-  }
-
-  const {
-    store,
-    config: engineOutput,
-    enabledPlugins,
-  } = initEngine({ config: engineConfig });
-  import("./api/core/init").then(({ default: initApp }) => {
-    let theme = defaultTheme;
-
-    try {
-      theme = require("theme.config.json");
-    } catch (e) {
-      process.env.NODE_ENV === "development" &&
-        console.log("Theme file not found, using default theme.");
-      theme = defaultTheme;
-    }
-
-    let config = {};
-
-    try {
-      config = require("app.config").default;
-    } catch {
-      config = {};
-    }
-
-    initApp({
-      store,
-      history: engineOutput.history || createBrowserHistory(),
-      config,
-      engine: enabledPlugins,
-      theme,
-    });
+import("./modular-engine-preview").then(({ initEngine }) => {
+  import("./engine.config").then(({ default: engineConfig }) => {
+    engineParams = initEngine(engineConfig);
   });
 });
+
+import("./api/core/init").then(({ default: createModularApp }) => {
+  import("./app.config").then(({ default: creatorConfig }) => {
+    ModularApp = (args: any) =>
+      createModularApp({
+        ...args,
+        creatorConfig: creatorConfig,
+      });
+  });
+});
+
+const check = () => {
+  if (engineParams != null && ModularApp != null) {
+    import("react-dom").then(({ render }) => {
+      render(
+        ModularApp({
+          store: engineParams.store,
+          engineConfig: engineParams.config,
+          enginePlugins: engineParams.enabledPlugins,
+        }),
+        document.getElementById("root"),
+        () => {
+          let Preloader = document.getElementById("preloader");
+          if (Preloader) Preloader.style.visibility = "hidden";
+        }
+      );
+    });
+  } else {
+    setTimeout(() => {
+      check();
+    }, 10);
+  }
+};
+
+check();

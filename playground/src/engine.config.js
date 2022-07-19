@@ -1,5 +1,6 @@
-const { closeDrawer, openDrawer } = require("./api/actions");
-const plugins = require("./plugins").default;
+import { closeDrawer, openDrawer } from "./app/actions";
+import plugins from "./plugins";
+
 const engineConfig = {
   appName: "Modular-engine",
   debug: false,
@@ -23,20 +24,7 @@ const engineConfig = {
       },
     },
   },
-
-  epics: [
-    // (actions$, state$) =>
-    //   actions$.pipe(
-    //     filter(setDarkMode.match),
-    //     withLatestFrom(state$),
-    //     tap({
-    //       next: ([action, state]) => {
-    //         console.log(action);
-    //       },
-    //     })
-    //   ),
-  ],
-
+  epics: [],
   ui: { darkMode: true },
   urlChecker: {
     queryParameters: {
@@ -47,18 +35,22 @@ const engineConfig = {
     },
     after: ["test"],
   },
+  modal: {
+    onModalOpen: [() => console.log("opened")],
+  },
   router: {
     basename: "/modular-engine",
     homePage: "Home",
     routes: {
-      TestPage: "/test",
       Home: "/",
+      Selectors: "/selectors",
+      Actions: "/actions",
     },
   },
-  i18n: {
+  localization: {
     fallbackLanguage: "en",
     supportedLanguages: ["en", "it", "es", "fr", "de"],
-    namespaces: ["home"],
+    namespaces: ["home", "common"],
     defaultNamespace: "home",
     loadPath: "/modular-engine/locales/{{lng}}/{{ns}}.json",
     titlesNamespace: "page-titles",

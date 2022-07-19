@@ -7,12 +7,15 @@
 
 <br>
 
----
+A tiny and powerful engine to extend your app with a lot of functionalities
+
+## <br>
 
 ## Summary<
 
 - [Getting started](#getting-started)
   - [Installation](#installation)
+  - [Usage]
 - [Tests](#tests)
 - [Included libraries](#included-libraries)
 - [Authors](#authors)
@@ -26,13 +29,15 @@
 
 ### Installation
 
-If you want to use this library inside your project, just install it:
+If you want to use this library inside your project, install it with npm:
 
 ```sh
 npm i modular-engine
 ```
 
 <br>
+
+### Usage
 
 ---
 

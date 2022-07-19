@@ -1,5 +1,7 @@
 /**
- * @file internal modular-engine Redux store init
+ * @file internal [modular-engine](https://github.com/CianciarusoCataldo/modular-engine) store init
+ *
+ * @see https://cianciarusocataldo.github.io/modular-engine/docs
  *
  * @author Cataldo Cianciaruso <https://github.com/CianciarusoCataldo>
  *
@@ -14,10 +16,12 @@ import {
   ModularEngineGlobalState,
 } from "modular-engine-types";
 
-import { engineInitCompleted } from "modular-utils";
+import { engineInitCompleted } from "modular-engine-tools";
 
 /**
- * Initialize and returns a Redux store, using Modular-engine Config parameters
+ * Initialize and returns a Redux store, using [modular-engine](https://github.com/CianciarusoCataldo/modular-engine) config parameters
+ *
+ * @see https://cianciarusocataldo.github.io/modular-engine/docs
  *
  * @param {ModularEngineConfig} config Configuration parameters
  *

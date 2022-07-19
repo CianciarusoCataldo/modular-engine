@@ -1,5 +1,7 @@
 /**
- * @file modular-engine init helpers
+ * @file [modular-engine](https://github.com/CianciarusoCataldo/modular-engine) init helpers
+ *
+ * @see https://cianciarusocataldo.github.io/modular-engine/docs
  *
  * @author Cataldo Cianciaruso <https://github.com/CianciarusoCataldo>
  *
@@ -15,8 +17,18 @@ import {
   ModularEngineStore,
 } from "modular-engine-types";
 
-import { createModularReducer, fillObject } from "modular-utils";
+import { createModularReducer } from "modular-engine-tools";
+import { fillObject } from "modular-utils";
 
+/**
+ * parse [modular-engine](https://github.com/CianciarusoCataldo/modular-engine) plugins
+ *
+ * @see https://cianciarusocataldo.github.io/modular-engine/docs
+ *
+ * @author Cataldo Cianciaruso <https://github.com/CianciarusoCataldo>
+ *
+ * @copyright Cataldo Cianciaruso 2022
+ */
 export const parsePlugins = (config: ModularEngineConfig) => {
   let inputConfig = { ...config };
 

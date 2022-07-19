@@ -1,6 +1,6 @@
 const FooterContent = () => {
   return (
-    <div className="flex flex-col items-center my-2">
+    <div className="flex flex-col items-center mt-2">
       <div className="flex flex-row p-2">
         <img
           alt=""

@@ -1,8 +1,8 @@
 # Status
 
 ![NPM](https://img.shields.io/npm/l/@cianciarusocataldo/modular-engine?label=License&style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAAXNSR0IArs4c6QAAAEtQTFRFAAAAbdrhbtrhlOPoqejsvby8wL+/33pu6ebm6enp6ufm6urq6+vr7u7u8fHx8vLy8/Pz9PT0+aaY+5uL+6yf+/v7/o97/4x4/456XOpx3wAAAAF0Uk5TAEDm2GYAAAClSURBVCjPxdHZEsIgDAXQxA3jUkXF+P9fKkmgRUOnj70PDNND0iEArBjKOce5KNMCZ2fmWX6y5dXlI7Oe8g1AvzIlCbk/GGfd4k49xr1E1tvEiAk3iTrVJ35EtFzfveafi1Zj01xy/22O3ebCpEy1+hCbanW5l784lHmwrTMzL0N1j1OYQuAQ6tvZYFouxf/ljmmBqw95CxOTZxi5TWXos/kAK+cLKQEkGY0V3h4AAAAASUVORK5CYII=) 
-![npm (scoped)](https://img.shields.io/npm/v/@cianciarusocataldo/modular-engine?color=orange%20&label=Latest%20version&style=for-the-badge&logo=npm) 
-![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@cianciarusocataldo/modular-engine?label=Package%20size&style=for-the-badge&logo=npm)
+![npm (scoped)](https://img.shields.io/npm/v/modular-engine?color=orange%20&label=Latest%20version&style=for-the-badge&logo=npm) 
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/modular-engine?label=Package%20size&style=for-the-badge&logo=npm)
 ![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained&style=for-the-badge)
 
 ## Security
