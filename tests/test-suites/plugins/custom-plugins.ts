@@ -121,7 +121,7 @@ const runTests = () => {
         config.redux.customize["testPlugin"] = { state: {}, effects: {} };
       }
 
-      const result = initEngine(config).enabledPlugins;
+      const result = initEngine(config).config.enabledPlugins;
 
       expect(result).toStrictEqual({
         "test-plugin1": true,
